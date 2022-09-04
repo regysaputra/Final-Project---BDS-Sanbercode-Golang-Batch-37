@@ -1,0 +1,1346 @@
+definitions:
+  controller.GantiPasswordInput:
+    properties:
+      password:
+        type: string
+    required:
+    - password
+    type: object
+  controller.LoginInput:
+    properties:
+      password:
+        type: string
+      username:
+        type: string
+    required:
+    - password
+    - username
+    type: object
+  controller.RegisterInput:
+    properties:
+      email:
+        type: string
+      password:
+        type: string
+      role:
+        type: string
+      username:
+        type: string
+    required:
+    - email
+    - password
+    - role
+    - username
+    type: object
+  controller.appointmentInput:
+    properties:
+      mode:
+        type: string
+      pasienID:
+        type: integer
+      tanggal:
+        type: string
+    type: object
+  controller.diagnosaInput:
+    properties:
+      berat_badan:
+        type: number
+      dokterID:
+        type: integer
+      hasil_diagnosa:
+        type: string
+      keluhan:
+        type: string
+      pasienID:
+        type: integer
+      tanggal:
+        type: string
+      tekanan_darah:
+        type: string
+      tindakan:
+        type: string
+    type: object
+  controller.dokterInput:
+    properties:
+      jadwal:
+        type: string
+      jenis_kelamin:
+        type: string
+      nama:
+        type: string
+      no_hp:
+        type: string
+      spesialis:
+        type: string
+      tanggal_lahir:
+        type: string
+    type: object
+  controller.kamarInput:
+    properties:
+      harga:
+        type: string
+      lantai:
+        type: string
+      status:
+        type: boolean
+      type:
+        type: string
+    type: object
+  controller.obatInput:
+    properties:
+      harga:
+        type: string
+      keterangan:
+        type: string
+      nama:
+        type: string
+      satuan:
+        type: string
+    type: object
+  controller.pasienInput:
+    properties:
+      alamat:
+        type: string
+      jenis_kelamin:
+        type: string
+      nama:
+        type: string
+      no_hp:
+        type: string
+      tanggal_lahir:
+        type: string
+    type: object
+  controller.perawatInput:
+    properties:
+      nama:
+        type: string
+    type: object
+  controller.rawatInapInput:
+    properties:
+      dokterInapID:
+        type: integer
+      kamarID:
+        type: string
+      pasienID:
+        type: integer
+      perawatID:
+        type: integer
+      tanggal_keluar:
+        type: string
+      tanggal_masuk:
+        type: string
+    type: object
+  controller.resepInput:
+    properties:
+      diagnosaID:
+        type: integer
+      dosis:
+        type: string
+      jumlah:
+        type: integer
+      obatID:
+        type: integer
+    type: object
+  controller.transaksiInput:
+    properties:
+      biaya_dokter:
+        type: string
+      biaya_kamar:
+        type: string
+      biaya_obat:
+        type: string
+      diagnosaID:
+        type: integer
+      total:
+        type: string
+    type: object
+  models.Appointment:
+    properties:
+      department:
+        type: string
+      id:
+        type: integer
+      mode:
+        type: string
+      pasienID:
+        type: integer
+    type: object
+  models.Diagnosa:
+    properties:
+      berat_badan:
+        type: number
+      dokterID:
+        type: integer
+      hasil_diagnosa:
+        type: string
+      id:
+        type: integer
+      keluhan:
+        type: string
+      pasienID:
+        type: integer
+      tanggal:
+        type: string
+      tekanan_darah:
+        type: string
+      tindakan:
+        type: string
+    type: object
+  models.Dokter:
+    properties:
+      id:
+        type: integer
+      jadwal:
+        type: string
+      jenis_kelamin:
+        type: string
+      nama:
+        type: string
+      no_hp:
+        type: string
+      spesialis:
+        type: string
+      tanggal_lahir:
+        type: string
+    type: object
+  models.Kamar:
+    properties:
+      harga:
+        type: string
+      lantai:
+        type: string
+      no_kamar:
+        type: string
+      status:
+        type: boolean
+      type:
+        type: string
+    type: object
+  models.Obat:
+    properties:
+      harga:
+        type: string
+      id:
+        type: integer
+      keterangan:
+        type: string
+      nama:
+        type: string
+      satuan:
+        type: string
+    type: object
+  models.Pasien:
+    properties:
+      alamat:
+        type: string
+      created_at:
+        type: string
+      id:
+        type: integer
+      jenis_kelamin:
+        type: string
+      nama:
+        type: string
+      no_hp:
+        type: string
+      tanggal_lahir:
+        type: string
+      updated_at:
+        type: string
+    type: object
+  models.Perawat:
+    properties:
+      id:
+        type: integer
+      nama:
+        type: string
+    type: object
+  models.RawatInap:
+    properties:
+      dokterID:
+        type: integer
+      id:
+        type: integer
+      kamarID:
+        type: string
+      pasienID:
+        type: integer
+      perawatID:
+        type: integer
+      tanggal_keluar:
+        type: string
+      tanggal_masuk:
+        type: string
+    type: object
+  models.Resep:
+    properties:
+      diagnosaID:
+        type: integer
+      dosis:
+        type: string
+      id:
+        type: integer
+      jumlah:
+        type: integer
+      obatID:
+        type: integer
+    type: object
+  models.Transaksi:
+    properties:
+      biaya_dokter:
+        type: string
+      biaya_kamar:
+        type: string
+      biaya_obat:
+        type: string
+      diagnosaID:
+        type: integer
+      id:
+        type: integer
+      total:
+        type: string
+    type: object
+info:
+  contact:
+    email: support@swagger.io
+    name: API Support
+    url: http://www.swagger.io/support
+  license:
+    name: Apache 2.0
+    url: http://www.apache.org/licenses/LICENSE-2.0.html
+  termsOfService: http://swagger.io/terms/
+paths:
+  /appointment:
+    get:
+      description: Get a list of Appointment.
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            items:
+              $ref: '#/definitions/models.Appointment'
+            type: array
+      summary: Get all Appointment.
+      tags:
+      - Appointment
+    post:
+      description: Creating a new Appointment.
+      parameters:
+      - description: the body to create a new Appointment
+        in: body
+        name: Body
+        required: true
+        schema:
+          $ref: '#/definitions/controller.appointmentInput'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/models.Appointment'
+      summary: Create New Appointment.
+      tags:
+      - Appointment
+  /appointment/{id}:
+    delete:
+      description: Delete a Appointment by id.
+      parameters:
+      - description: Appointment id
+        in: path
+        name: id
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            additionalProperties:
+              type: boolean
+            type: object
+      summary: Delete one Appointment.
+      tags:
+      - Appointment
+    get:
+      description: Get an Appointment by id.
+      parameters:
+      - description: Appointment id
+        in: path
+        name: id
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/models.Appointment'
+      summary: Get Appointment.
+      tags:
+      - Appointment
+    patch:
+      description: Update Appointment by id.
+      parameters:
+      - description: Appointment id
+        in: path
+        name: id
+        required: true
+        type: string
+      - description: the body to update age appointment category
+        in: body
+        name: Body
+        required: true
+        schema:
+          $ref: '#/definitions/controller.appointmentInput'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/models.Appointment'
+      summary: Update Appointment.
+      tags:
+      - Appointment
+  /diagnosa:
+    get:
+      description: Get a list of Diagnosa.
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            items:
+              $ref: '#/definitions/models.Diagnosa'
+            type: array
+      summary: Get all Diagnosa.
+      tags:
+      - Diagnosa
+    post:
+      description: Creating a new Diagnosa.
+      parameters:
+      - description: the body to create a new Diagnosa
+        in: body
+        name: Body
+        required: true
+        schema:
+          $ref: '#/definitions/controller.diagnosaInput'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/models.Diagnosa'
+      summary: Create New Diagnosa.
+      tags:
+      - Diagnosa
+  /diagnosa/{id}:
+    delete:
+      description: Delete a Diagnosa by id.
+      parameters:
+      - description: Diagnosa id
+        in: path
+        name: id
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            additionalProperties:
+              type: boolean
+            type: object
+      summary: Delete one Diagnosa.
+      tags:
+      - Diagnosa
+    get:
+      description: Get an Diagnosa by id.
+      parameters:
+      - description: Diagnosa id
+        in: path
+        name: id
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/models.Diagnosa'
+      summary: Get Diagnosa.
+      tags:
+      - Diagnosa
+    patch:
+      description: Update Diagnosa by id.
+      parameters:
+      - description: Diagnosa id
+        in: path
+        name: id
+        required: true
+        type: string
+      - description: the body to update age diagnosa category
+        in: body
+        name: Body
+        required: true
+        schema:
+          $ref: '#/definitions/controller.diagnosaInput'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/models.Diagnosa'
+      summary: Update Diagnosa.
+      tags:
+      - Diagnosa
+  /dokter:
+    get:
+      description: Get a list of Dokter.
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            items:
+              $ref: '#/definitions/models.Dokter'
+            type: array
+      summary: Get all Dokter.
+      tags:
+      - Dokter
+    post:
+      description: Creating a new Dokter.
+      parameters:
+      - description: the body to create a new Dokter
+        in: body
+        name: Body
+        required: true
+        schema:
+          $ref: '#/definitions/controller.dokterInput'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/models.Dokter'
+      summary: Create New Dokter.
+      tags:
+      - Dokter
+  /dokter/{id}:
+    delete:
+      description: Delete a Dokter by id.
+      parameters:
+      - description: Dokter id
+        in: path
+        name: id
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            additionalProperties:
+              type: boolean
+            type: object
+      summary: Delete one Dokter.
+      tags:
+      - Dokter
+    get:
+      description: Get an Dokter by id.
+      parameters:
+      - description: Dokter id
+        in: path
+        name: id
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/models.Dokter'
+      summary: Get Dokter.
+      tags:
+      - Dokter
+    patch:
+      description: Update Dokter by id.
+      parameters:
+      - description: Dokter id
+        in: path
+        name: id
+        required: true
+        type: string
+      - description: the body to update age dokter category
+        in: body
+        name: Body
+        required: true
+        schema:
+          $ref: '#/definitions/controller.dokterInput'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/models.Dokter'
+      summary: Update Dokter.
+      tags:
+      - Dokter
+  /ganti-password:
+    post:
+      description: Change password.
+      parameters:
+      - description: the body to change password
+        in: body
+        name: Body
+        required: true
+        schema:
+          $ref: '#/definitions/controller.GantiPasswordInput'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            additionalProperties: true
+            type: object
+      summary: Ganti password.
+      tags:
+      - Auth
+  /kamar:
+    get:
+      description: Get a list of Kamar.
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            items:
+              $ref: '#/definitions/models.Kamar'
+            type: array
+      summary: Get all Kamar.
+      tags:
+      - Kamar
+    post:
+      description: Creating a new Kamar.
+      parameters:
+      - description: the body to create a new Kamar
+        in: body
+        name: Body
+        required: true
+        schema:
+          $ref: '#/definitions/controller.kamarInput'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/models.Kamar'
+      summary: Create New Kamar.
+      tags:
+      - Kamar
+  /kamar/{id}:
+    delete:
+      description: Delete a Kamar by id.
+      parameters:
+      - description: Kamar id
+        in: path
+        name: id
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            additionalProperties:
+              type: boolean
+            type: object
+      summary: Delete one Kamar.
+      tags:
+      - Kamar
+    get:
+      description: Get an Kamar by id.
+      parameters:
+      - description: Kamar id
+        in: path
+        name: id
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/models.Kamar'
+      summary: Get Kamar.
+      tags:
+      - Kamar
+    patch:
+      description: Update Kamar by id.
+      parameters:
+      - description: Kamar id
+        in: path
+        name: id
+        required: true
+        type: string
+      - description: the body to update age kamar category
+        in: body
+        name: Body
+        required: true
+        schema:
+          $ref: '#/definitions/controller.kamarInput'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/models.Kamar'
+      summary: Update Kamar.
+      tags:
+      - Kamar
+  /login:
+    post:
+      description: Logging in to get jwt token to access admin or user api by roles.
+      parameters:
+      - description: the body to login a user
+        in: body
+        name: Body
+        required: true
+        schema:
+          $ref: '#/definitions/controller.LoginInput'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            additionalProperties: true
+            type: object
+      summary: Login as as user.
+      tags:
+      - Auth
+  /obat:
+    get:
+      description: Get a list of Obat.
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            items:
+              $ref: '#/definitions/models.Obat'
+            type: array
+      summary: Get all Obat.
+      tags:
+      - Obat
+    post:
+      description: Creating a new Obat.
+      parameters:
+      - description: the body to create a new Obat
+        in: body
+        name: Body
+        required: true
+        schema:
+          $ref: '#/definitions/controller.obatInput'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/models.Obat'
+      summary: Create New Obat.
+      tags:
+      - Obat
+  /obat/{id}:
+    delete:
+      description: Delete a Obat by id.
+      parameters:
+      - description: Obat id
+        in: path
+        name: id
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            additionalProperties:
+              type: boolean
+            type: object
+      summary: Delete one Obat.
+      tags:
+      - Obat
+    get:
+      description: Get an Obat by id.
+      parameters:
+      - description: Obat id
+        in: path
+        name: id
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/models.Obat'
+      summary: Get Obat.
+      tags:
+      - Obat
+    patch:
+      description: Update Obat by id.
+      parameters:
+      - description: Obat id
+        in: path
+        name: id
+        required: true
+        type: string
+      - description: the body to update age obat category
+        in: body
+        name: Body
+        required: true
+        schema:
+          $ref: '#/definitions/controller.obatInput'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/models.Obat'
+      summary: Update Obat.
+      tags:
+      - Obat
+  /pasien:
+    get:
+      description: Get a list of Pasien.
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            items:
+              $ref: '#/definitions/models.Pasien'
+            type: array
+      summary: Get all Pasien.
+      tags:
+      - Pasien
+    post:
+      description: Creating a new Pasien.
+      parameters:
+      - description: the body to create a new Pasien
+        in: body
+        name: Body
+        required: true
+        schema:
+          $ref: '#/definitions/controller.pasienInput'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/models.Pasien'
+      summary: Create New Pasien.
+      tags:
+      - Pasien
+  /pasien/{id}:
+    delete:
+      description: Delete a Pasien by id.
+      parameters:
+      - description: Pasien id
+        in: path
+        name: id
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            additionalProperties:
+              type: boolean
+            type: object
+      summary: Delete one Pasien.
+      tags:
+      - Pasien
+    get:
+      description: Get an Pasien by id.
+      parameters:
+      - description: Pasien id
+        in: path
+        name: id
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/models.Pasien'
+      summary: Get Pasien.
+      tags:
+      - Pasien
+    patch:
+      description: Update Pasien by id.
+      parameters:
+      - description: Pasien id
+        in: path
+        name: id
+        required: true
+        type: string
+      - description: the body to update age pasien category
+        in: body
+        name: Body
+        required: true
+        schema:
+          $ref: '#/definitions/controller.pasienInput'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/models.Pasien'
+      summary: Update Pasien.
+      tags:
+      - Pasien
+  /perawat:
+    get:
+      description: Get a list of Perawat.
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            items:
+              $ref: '#/definitions/models.Perawat'
+            type: array
+      summary: Get all Perawat.
+      tags:
+      - Perawat
+    post:
+      description: Creating a new Perawat.
+      parameters:
+      - description: the body to create a new Perawat
+        in: body
+        name: Body
+        required: true
+        schema:
+          $ref: '#/definitions/controller.perawatInput'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/models.Perawat'
+      summary: Create New Perawat.
+      tags:
+      - Perawat
+  /perawat/{id}:
+    delete:
+      description: Delete a Perawat by id.
+      parameters:
+      - description: Perawat id
+        in: path
+        name: id
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            additionalProperties:
+              type: boolean
+            type: object
+      summary: Delete one Perawat.
+      tags:
+      - Perawat
+    get:
+      description: Get an Perawat by id.
+      parameters:
+      - description: Perawat id
+        in: path
+        name: id
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/models.Perawat'
+      summary: Get Perawat.
+      tags:
+      - Perawat
+    patch:
+      description: Update Perawat by id.
+      parameters:
+      - description: Perawat id
+        in: path
+        name: id
+        required: true
+        type: string
+      - description: the body to update age perawat category
+        in: body
+        name: Body
+        required: true
+        schema:
+          $ref: '#/definitions/controller.perawatInput'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/models.Perawat'
+      summary: Update Perawat.
+      tags:
+      - Perawat
+  /rawatInap:
+    get:
+      description: Get a list of RawatInap.
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            items:
+              $ref: '#/definitions/models.RawatInap'
+            type: array
+      summary: Get all RawatInap.
+      tags:
+      - RawatInap
+    post:
+      description: Creating a new RawatInap.
+      parameters:
+      - description: the body to create a new RawatInap
+        in: body
+        name: Body
+        required: true
+        schema:
+          $ref: '#/definitions/controller.rawatInapInput'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/models.RawatInap'
+      summary: Create New RawatInap.
+      tags:
+      - RawatInap
+  /rawatInap/{id}:
+    delete:
+      description: Delete a RawatInap by id.
+      parameters:
+      - description: RawatInap id
+        in: path
+        name: id
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            additionalProperties:
+              type: boolean
+            type: object
+      summary: Delete one RawatInap.
+      tags:
+      - RawatInap
+    get:
+      description: Get an RawatInap by id.
+      parameters:
+      - description: RawatInap id
+        in: path
+        name: id
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/models.RawatInap'
+      summary: Get RawatInap.
+      tags:
+      - RawatInap
+    patch:
+      description: Update RawatInap by id.
+      parameters:
+      - description: RawatInap id
+        in: path
+        name: id
+        required: true
+        type: string
+      - description: the body to update age rawatInap category
+        in: body
+        name: Body
+        required: true
+        schema:
+          $ref: '#/definitions/controller.rawatInapInput'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/models.RawatInap'
+      summary: Update RawatInap.
+      tags:
+      - RawatInap
+  /register:
+    post:
+      description: registering a user from public access.
+      parameters:
+      - description: the body to register a user
+        in: body
+        name: Body
+        required: true
+        schema:
+          $ref: '#/definitions/controller.RegisterInput'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            additionalProperties: true
+            type: object
+      summary: Register a user.
+      tags:
+      - Auth
+  /resep:
+    get:
+      description: Get a list of Resep.
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            items:
+              $ref: '#/definitions/models.Resep'
+            type: array
+      summary: Get all Resep.
+      tags:
+      - Resep
+    post:
+      description: Creating a new Resep.
+      parameters:
+      - description: the body to create a new Resep
+        in: body
+        name: Body
+        required: true
+        schema:
+          $ref: '#/definitions/controller.resepInput'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/models.Resep'
+      summary: Create New Resep.
+      tags:
+      - Resep
+  /resep/{id}:
+    delete:
+      description: Delete a Resep by id.
+      parameters:
+      - description: Resep id
+        in: path
+        name: id
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            additionalProperties:
+              type: boolean
+            type: object
+      summary: Delete one Resep.
+      tags:
+      - Resep
+    get:
+      description: Get an Resep by id.
+      parameters:
+      - description: Resep id
+        in: path
+        name: id
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/models.Resep'
+      summary: Get Resep.
+      tags:
+      - Resep
+    patch:
+      description: Update Resep by id.
+      parameters:
+      - description: Resep id
+        in: path
+        name: id
+        required: true
+        type: string
+      - description: the body to update age resep category
+        in: body
+        name: Body
+        required: true
+        schema:
+          $ref: '#/definitions/controller.resepInput'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/models.Resep'
+      summary: Update Resep.
+      tags:
+      - Resep
+  /transaksi:
+    get:
+      description: Get a list of Transaksi.
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            items:
+              $ref: '#/definitions/models.Transaksi'
+            type: array
+      summary: Get all Transaksi.
+      tags:
+      - Transaksi
+    post:
+      description: Creating a new Transaksi.
+      parameters:
+      - description: the body to create a new Transaksi
+        in: body
+        name: Body
+        required: true
+        schema:
+          $ref: '#/definitions/controller.transaksiInput'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/models.Transaksi'
+      summary: Create New Transaksi.
+      tags:
+      - Transaksi
+  /transaksi/{id}:
+    delete:
+      description: Delete a Transaksi by id.
+      parameters:
+      - description: Transaksi id
+        in: path
+        name: id
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            additionalProperties:
+              type: boolean
+            type: object
+      summary: Delete one Transaksi.
+      tags:
+      - Transaksi
+    get:
+      description: Get an Transaksi by id.
+      parameters:
+      - description: Transaksi id
+        in: path
+        name: id
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/models.Transaksi'
+      summary: Get Transaksi.
+      tags:
+      - Transaksi
+    patch:
+      description: Update Transaksi by id.
+      parameters:
+      - description: Transaksi id
+        in: path
+        name: id
+        required: true
+        type: string
+      - description: the body to update age transaksi category
+        in: body
+        name: Body
+        required: true
+        schema:
+          $ref: '#/definitions/controller.transaksiInput'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/models.Transaksi'
+      summary: Update Transaksi.
+      tags:
+      - Transaksi
+swagger: "2.0"

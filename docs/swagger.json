@@ -1,0 +1,2046 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "termsOfService": "http://swagger.io/terms/",
+        "contact": {
+            "name": "API Support",
+            "url": "http://www.swagger.io/support",
+            "email": "support@swagger.io"
+        },
+        "license": {
+            "name": "Apache 2.0",
+            "url": "http://www.apache.org/licenses/LICENSE-2.0.html"
+        }
+    },
+    "paths": {
+        "/appointment": {
+            "get": {
+                "description": "Get a list of Appointment.",
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Appointment"
+                ],
+                "summary": "Get all Appointment.",
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/models.Appointment"
+                            }
+                        }
+                    }
+                }
+            },
+            "post": {
+                "description": "Creating a new Appointment.",
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Appointment"
+                ],
+                "summary": "Create New Appointment.",
+                "parameters": [
+                    {
+                        "description": "the body to create a new Appointment",
+                        "name": "Body",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/controller.appointmentInput"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/models.Appointment"
+                        }
+                    }
+                }
+            }
+        },
+        "/appointment/{id}": {
+            "get": {
+                "description": "Get an Appointment by id.",
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Appointment"
+                ],
+                "summary": "Get Appointment.",
+                "parameters": [
+                    {
+                        "type": "string",
+                        "description": "Appointment id",
+                        "name": "id",
+                        "in": "path",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/models.Appointment"
+                        }
+                    }
+                }
+            },
+            "delete": {
+                "description": "Delete a Appointment by id.",
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Appointment"
+                ],
+                "summary": "Delete one Appointment.",
+                "parameters": [
+                    {
+                        "type": "string",
+                        "description": "Appointment id",
+                        "name": "id",
+                        "in": "path",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "object",
+                            "additionalProperties": {
+                                "type": "boolean"
+                            }
+                        }
+                    }
+                }
+            },
+            "patch": {
+                "description": "Update Appointment by id.",
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Appointment"
+                ],
+                "summary": "Update Appointment.",
+                "parameters": [
+                    {
+                        "type": "string",
+                        "description": "Appointment id",
+                        "name": "id",
+                        "in": "path",
+                        "required": true
+                    },
+                    {
+                        "description": "the body to update age appointment category",
+                        "name": "Body",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/controller.appointmentInput"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/models.Appointment"
+                        }
+                    }
+                }
+            }
+        },
+        "/diagnosa": {
+            "get": {
+                "description": "Get a list of Diagnosa.",
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Diagnosa"
+                ],
+                "summary": "Get all Diagnosa.",
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/models.Diagnosa"
+                            }
+                        }
+                    }
+                }
+            },
+            "post": {
+                "description": "Creating a new Diagnosa.",
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Diagnosa"
+                ],
+                "summary": "Create New Diagnosa.",
+                "parameters": [
+                    {
+                        "description": "the body to create a new Diagnosa",
+                        "name": "Body",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/controller.diagnosaInput"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/models.Diagnosa"
+                        }
+                    }
+                }
+            }
+        },
+        "/diagnosa/{id}": {
+            "get": {
+                "description": "Get an Diagnosa by id.",
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Diagnosa"
+                ],
+                "summary": "Get Diagnosa.",
+                "parameters": [
+                    {
+                        "type": "string",
+                        "description": "Diagnosa id",
+                        "name": "id",
+                        "in": "path",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/models.Diagnosa"
+                        }
+                    }
+                }
+            },
+            "delete": {
+                "description": "Delete a Diagnosa by id.",
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Diagnosa"
+                ],
+                "summary": "Delete one Diagnosa.",
+                "parameters": [
+                    {
+                        "type": "string",
+                        "description": "Diagnosa id",
+                        "name": "id",
+                        "in": "path",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "object",
+                            "additionalProperties": {
+                                "type": "boolean"
+                            }
+                        }
+                    }
+                }
+            },
+            "patch": {
+                "description": "Update Diagnosa by id.",
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Diagnosa"
+                ],
+                "summary": "Update Diagnosa.",
+                "parameters": [
+                    {
+                        "type": "string",
+                        "description": "Diagnosa id",
+                        "name": "id",
+                        "in": "path",
+                        "required": true
+                    },
+                    {
+                        "description": "the body to update age diagnosa category",
+                        "name": "Body",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/controller.diagnosaInput"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/models.Diagnosa"
+                        }
+                    }
+                }
+            }
+        },
+        "/dokter": {
+            "get": {
+                "description": "Get a list of Dokter.",
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Dokter"
+                ],
+                "summary": "Get all Dokter.",
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/models.Dokter"
+                            }
+                        }
+                    }
+                }
+            },
+            "post": {
+                "description": "Creating a new Dokter.",
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Dokter"
+                ],
+                "summary": "Create New Dokter.",
+                "parameters": [
+                    {
+                        "description": "the body to create a new Dokter",
+                        "name": "Body",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/controller.dokterInput"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/models.Dokter"
+                        }
+                    }
+                }
+            }
+        },
+        "/dokter/{id}": {
+            "get": {
+                "description": "Get an Dokter by id.",
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Dokter"
+                ],
+                "summary": "Get Dokter.",
+                "parameters": [
+                    {
+                        "type": "string",
+                        "description": "Dokter id",
+                        "name": "id",
+                        "in": "path",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/models.Dokter"
+                        }
+                    }
+                }
+            },
+            "delete": {
+                "description": "Delete a Dokter by id.",
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Dokter"
+                ],
+                "summary": "Delete one Dokter.",
+                "parameters": [
+                    {
+                        "type": "string",
+                        "description": "Dokter id",
+                        "name": "id",
+                        "in": "path",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "object",
+                            "additionalProperties": {
+                                "type": "boolean"
+                            }
+                        }
+                    }
+                }
+            },
+            "patch": {
+                "description": "Update Dokter by id.",
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Dokter"
+                ],
+                "summary": "Update Dokter.",
+                "parameters": [
+                    {
+                        "type": "string",
+                        "description": "Dokter id",
+                        "name": "id",
+                        "in": "path",
+                        "required": true
+                    },
+                    {
+                        "description": "the body to update age dokter category",
+                        "name": "Body",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/controller.dokterInput"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/models.Dokter"
+                        }
+                    }
+                }
+            }
+        },
+        "/ganti-password": {
+            "post": {
+                "description": "Change password.",
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Auth"
+                ],
+                "summary": "Ganti password.",
+                "parameters": [
+                    {
+                        "description": "the body to change password",
+                        "name": "Body",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/controller.GantiPasswordInput"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "object",
+                            "additionalProperties": true
+                        }
+                    }
+                }
+            }
+        },
+        "/kamar": {
+            "get": {
+                "description": "Get a list of Kamar.",
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Kamar"
+                ],
+                "summary": "Get all Kamar.",
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/models.Kamar"
+                            }
+                        }
+                    }
+                }
+            },
+            "post": {
+                "description": "Creating a new Kamar.",
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Kamar"
+                ],
+                "summary": "Create New Kamar.",
+                "parameters": [
+                    {
+                        "description": "the body to create a new Kamar",
+                        "name": "Body",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/controller.kamarInput"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/models.Kamar"
+                        }
+                    }
+                }
+            }
+        },
+        "/kamar/{id}": {
+            "get": {
+                "description": "Get an Kamar by id.",
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Kamar"
+                ],
+                "summary": "Get Kamar.",
+                "parameters": [
+                    {
+                        "type": "string",
+                        "description": "Kamar id",
+                        "name": "id",
+                        "in": "path",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/models.Kamar"
+                        }
+                    }
+                }
+            },
+            "delete": {
+                "description": "Delete a Kamar by id.",
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Kamar"
+                ],
+                "summary": "Delete one Kamar.",
+                "parameters": [
+                    {
+                        "type": "string",
+                        "description": "Kamar id",
+                        "name": "id",
+                        "in": "path",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "object",
+                            "additionalProperties": {
+                                "type": "boolean"
+                            }
+                        }
+                    }
+                }
+            },
+            "patch": {
+                "description": "Update Kamar by id.",
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Kamar"
+                ],
+                "summary": "Update Kamar.",
+                "parameters": [
+                    {
+                        "type": "string",
+                        "description": "Kamar id",
+                        "name": "id",
+                        "in": "path",
+                        "required": true
+                    },
+                    {
+                        "description": "the body to update age kamar category",
+                        "name": "Body",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/controller.kamarInput"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/models.Kamar"
+                        }
+                    }
+                }
+            }
+        },
+        "/login": {
+            "post": {
+                "description": "Logging in to get jwt token to access admin or user api by roles.",
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Auth"
+                ],
+                "summary": "Login as as user.",
+                "parameters": [
+                    {
+                        "description": "the body to login a user",
+                        "name": "Body",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/controller.LoginInput"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "object",
+                            "additionalProperties": true
+                        }
+                    }
+                }
+            }
+        },
+        "/obat": {
+            "get": {
+                "description": "Get a list of Obat.",
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Obat"
+                ],
+                "summary": "Get all Obat.",
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/models.Obat"
+                            }
+                        }
+                    }
+                }
+            },
+            "post": {
+                "description": "Creating a new Obat.",
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Obat"
+                ],
+                "summary": "Create New Obat.",
+                "parameters": [
+                    {
+                        "description": "the body to create a new Obat",
+                        "name": "Body",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/controller.obatInput"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/models.Obat"
+                        }
+                    }
+                }
+            }
+        },
+        "/obat/{id}": {
+            "get": {
+                "description": "Get an Obat by id.",
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Obat"
+                ],
+                "summary": "Get Obat.",
+                "parameters": [
+                    {
+                        "type": "string",
+                        "description": "Obat id",
+                        "name": "id",
+                        "in": "path",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/models.Obat"
+                        }
+                    }
+                }
+            },
+            "delete": {
+                "description": "Delete a Obat by id.",
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Obat"
+                ],
+                "summary": "Delete one Obat.",
+                "parameters": [
+                    {
+                        "type": "string",
+                        "description": "Obat id",
+                        "name": "id",
+                        "in": "path",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "object",
+                            "additionalProperties": {
+                                "type": "boolean"
+                            }
+                        }
+                    }
+                }
+            },
+            "patch": {
+                "description": "Update Obat by id.",
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Obat"
+                ],
+                "summary": "Update Obat.",
+                "parameters": [
+                    {
+                        "type": "string",
+                        "description": "Obat id",
+                        "name": "id",
+                        "in": "path",
+                        "required": true
+                    },
+                    {
+                        "description": "the body to update age obat category",
+                        "name": "Body",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/controller.obatInput"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/models.Obat"
+                        }
+                    }
+                }
+            }
+        },
+        "/pasien": {
+            "get": {
+                "description": "Get a list of Pasien.",
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Pasien"
+                ],
+                "summary": "Get all Pasien.",
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/models.Pasien"
+                            }
+                        }
+                    }
+                }
+            },
+            "post": {
+                "description": "Creating a new Pasien.",
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Pasien"
+                ],
+                "summary": "Create New Pasien.",
+                "parameters": [
+                    {
+                        "description": "the body to create a new Pasien",
+                        "name": "Body",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/controller.pasienInput"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/models.Pasien"
+                        }
+                    }
+                }
+            }
+        },
+        "/pasien/{id}": {
+            "get": {
+                "description": "Get an Pasien by id.",
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Pasien"
+                ],
+                "summary": "Get Pasien.",
+                "parameters": [
+                    {
+                        "type": "string",
+                        "description": "Pasien id",
+                        "name": "id",
+                        "in": "path",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/models.Pasien"
+                        }
+                    }
+                }
+            },
+            "delete": {
+                "description": "Delete a Pasien by id.",
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Pasien"
+                ],
+                "summary": "Delete one Pasien.",
+                "parameters": [
+                    {
+                        "type": "string",
+                        "description": "Pasien id",
+                        "name": "id",
+                        "in": "path",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "object",
+                            "additionalProperties": {
+                                "type": "boolean"
+                            }
+                        }
+                    }
+                }
+            },
+            "patch": {
+                "description": "Update Pasien by id.",
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Pasien"
+                ],
+                "summary": "Update Pasien.",
+                "parameters": [
+                    {
+                        "type": "string",
+                        "description": "Pasien id",
+                        "name": "id",
+                        "in": "path",
+                        "required": true
+                    },
+                    {
+                        "description": "the body to update age pasien category",
+                        "name": "Body",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/controller.pasienInput"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/models.Pasien"
+                        }
+                    }
+                }
+            }
+        },
+        "/perawat": {
+            "get": {
+                "description": "Get a list of Perawat.",
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Perawat"
+                ],
+                "summary": "Get all Perawat.",
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/models.Perawat"
+                            }
+                        }
+                    }
+                }
+            },
+            "post": {
+                "description": "Creating a new Perawat.",
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Perawat"
+                ],
+                "summary": "Create New Perawat.",
+                "parameters": [
+                    {
+                        "description": "the body to create a new Perawat",
+                        "name": "Body",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/controller.perawatInput"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/models.Perawat"
+                        }
+                    }
+                }
+            }
+        },
+        "/perawat/{id}": {
+            "get": {
+                "description": "Get an Perawat by id.",
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Perawat"
+                ],
+                "summary": "Get Perawat.",
+                "parameters": [
+                    {
+                        "type": "string",
+                        "description": "Perawat id",
+                        "name": "id",
+                        "in": "path",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/models.Perawat"
+                        }
+                    }
+                }
+            },
+            "delete": {
+                "description": "Delete a Perawat by id.",
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Perawat"
+                ],
+                "summary": "Delete one Perawat.",
+                "parameters": [
+                    {
+                        "type": "string",
+                        "description": "Perawat id",
+                        "name": "id",
+                        "in": "path",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "object",
+                            "additionalProperties": {
+                                "type": "boolean"
+                            }
+                        }
+                    }
+                }
+            },
+            "patch": {
+                "description": "Update Perawat by id.",
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Perawat"
+                ],
+                "summary": "Update Perawat.",
+                "parameters": [
+                    {
+                        "type": "string",
+                        "description": "Perawat id",
+                        "name": "id",
+                        "in": "path",
+                        "required": true
+                    },
+                    {
+                        "description": "the body to update age perawat category",
+                        "name": "Body",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/controller.perawatInput"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/models.Perawat"
+                        }
+                    }
+                }
+            }
+        },
+        "/rawatInap": {
+            "get": {
+                "description": "Get a list of RawatInap.",
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "RawatInap"
+                ],
+                "summary": "Get all RawatInap.",
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/models.RawatInap"
+                            }
+                        }
+                    }
+                }
+            },
+            "post": {
+                "description": "Creating a new RawatInap.",
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "RawatInap"
+                ],
+                "summary": "Create New RawatInap.",
+                "parameters": [
+                    {
+                        "description": "the body to create a new RawatInap",
+                        "name": "Body",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/controller.rawatInapInput"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/models.RawatInap"
+                        }
+                    }
+                }
+            }
+        },
+        "/rawatInap/{id}": {
+            "get": {
+                "description": "Get an RawatInap by id.",
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "RawatInap"
+                ],
+                "summary": "Get RawatInap.",
+                "parameters": [
+                    {
+                        "type": "string",
+                        "description": "RawatInap id",
+                        "name": "id",
+                        "in": "path",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/models.RawatInap"
+                        }
+                    }
+                }
+            },
+            "delete": {
+                "description": "Delete a RawatInap by id.",
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "RawatInap"
+                ],
+                "summary": "Delete one RawatInap.",
+                "parameters": [
+                    {
+                        "type": "string",
+                        "description": "RawatInap id",
+                        "name": "id",
+                        "in": "path",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "object",
+                            "additionalProperties": {
+                                "type": "boolean"
+                            }
+                        }
+                    }
+                }
+            },
+            "patch": {
+                "description": "Update RawatInap by id.",
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "RawatInap"
+                ],
+                "summary": "Update RawatInap.",
+                "parameters": [
+                    {
+                        "type": "string",
+                        "description": "RawatInap id",
+                        "name": "id",
+                        "in": "path",
+                        "required": true
+                    },
+                    {
+                        "description": "the body to update age rawatInap category",
+                        "name": "Body",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/controller.rawatInapInput"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/models.RawatInap"
+                        }
+                    }
+                }
+            }
+        },
+        "/register": {
+            "post": {
+                "description": "registering a user from public access.",
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Auth"
+                ],
+                "summary": "Register a user.",
+                "parameters": [
+                    {
+                        "description": "the body to register a user",
+                        "name": "Body",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/controller.RegisterInput"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "object",
+                            "additionalProperties": true
+                        }
+                    }
+                }
+            }
+        },
+        "/resep": {
+            "get": {
+                "description": "Get a list of Resep.",
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Resep"
+                ],
+                "summary": "Get all Resep.",
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/models.Resep"
+                            }
+                        }
+                    }
+                }
+            },
+            "post": {
+                "description": "Creating a new Resep.",
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Resep"
+                ],
+                "summary": "Create New Resep.",
+                "parameters": [
+                    {
+                        "description": "the body to create a new Resep",
+                        "name": "Body",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/controller.resepInput"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/models.Resep"
+                        }
+                    }
+                }
+            }
+        },
+        "/resep/{id}": {
+            "get": {
+                "description": "Get an Resep by id.",
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Resep"
+                ],
+                "summary": "Get Resep.",
+                "parameters": [
+                    {
+                        "type": "string",
+                        "description": "Resep id",
+                        "name": "id",
+                        "in": "path",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/models.Resep"
+                        }
+                    }
+                }
+            },
+            "delete": {
+                "description": "Delete a Resep by id.",
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Resep"
+                ],
+                "summary": "Delete one Resep.",
+                "parameters": [
+                    {
+                        "type": "string",
+                        "description": "Resep id",
+                        "name": "id",
+                        "in": "path",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "object",
+                            "additionalProperties": {
+                                "type": "boolean"
+                            }
+                        }
+                    }
+                }
+            },
+            "patch": {
+                "description": "Update Resep by id.",
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Resep"
+                ],
+                "summary": "Update Resep.",
+                "parameters": [
+                    {
+                        "type": "string",
+                        "description": "Resep id",
+                        "name": "id",
+                        "in": "path",
+                        "required": true
+                    },
+                    {
+                        "description": "the body to update age resep category",
+                        "name": "Body",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/controller.resepInput"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/models.Resep"
+                        }
+                    }
+                }
+            }
+        },
+        "/transaksi": {
+            "get": {
+                "description": "Get a list of Transaksi.",
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Transaksi"
+                ],
+                "summary": "Get all Transaksi.",
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/models.Transaksi"
+                            }
+                        }
+                    }
+                }
+            },
+            "post": {
+                "description": "Creating a new Transaksi.",
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Transaksi"
+                ],
+                "summary": "Create New Transaksi.",
+                "parameters": [
+                    {
+                        "description": "the body to create a new Transaksi",
+                        "name": "Body",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/controller.transaksiInput"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/models.Transaksi"
+                        }
+                    }
+                }
+            }
+        },
+        "/transaksi/{id}": {
+            "get": {
+                "description": "Get an Transaksi by id.",
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Transaksi"
+                ],
+                "summary": "Get Transaksi.",
+                "parameters": [
+                    {
+                        "type": "string",
+                        "description": "Transaksi id",
+                        "name": "id",
+                        "in": "path",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/models.Transaksi"
+                        }
+                    }
+                }
+            },
+            "delete": {
+                "description": "Delete a Transaksi by id.",
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Transaksi"
+                ],
+                "summary": "Delete one Transaksi.",
+                "parameters": [
+                    {
+                        "type": "string",
+                        "description": "Transaksi id",
+                        "name": "id",
+                        "in": "path",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "object",
+                            "additionalProperties": {
+                                "type": "boolean"
+                            }
+                        }
+                    }
+                }
+            },
+            "patch": {
+                "description": "Update Transaksi by id.",
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Transaksi"
+                ],
+                "summary": "Update Transaksi.",
+                "parameters": [
+                    {
+                        "type": "string",
+                        "description": "Transaksi id",
+                        "name": "id",
+                        "in": "path",
+                        "required": true
+                    },
+                    {
+                        "description": "the body to update age transaksi category",
+                        "name": "Body",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/controller.transaksiInput"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/models.Transaksi"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "definitions": {
+        "controller.GantiPasswordInput": {
+            "type": "object",
+            "required": [
+                "password"
+            ],
+            "properties": {
+                "password": {
+                    "type": "string"
+                }
+            }
+        },
+        "controller.LoginInput": {
+            "type": "object",
+            "required": [
+                "password",
+                "username"
+            ],
+            "properties": {
+                "password": {
+                    "type": "string"
+                },
+                "username": {
+                    "type": "string"
+                }
+            }
+        },
+        "controller.RegisterInput": {
+            "type": "object",
+            "required": [
+                "email",
+                "password",
+                "role",
+                "username"
+            ],
+            "properties": {
+                "email": {
+                    "type": "string"
+                },
+                "password": {
+                    "type": "string"
+                },
+                "role": {
+                    "type": "string"
+                },
+                "username": {
+                    "type": "string"
+                }
+            }
+        },
+        "controller.appointmentInput": {
+            "type": "object",
+            "properties": {
+                "mode": {
+                    "type": "string"
+                },
+                "pasienID": {
+                    "type": "integer"
+                },
+                "tanggal": {
+                    "type": "string"
+                }
+            }
+        },
+        "controller.diagnosaInput": {
+            "type": "object",
+            "properties": {
+                "berat_badan": {
+                    "type": "number"
+                },
+                "dokterID": {
+                    "type": "integer"
+                },
+                "hasil_diagnosa": {
+                    "type": "string"
+                },
+                "keluhan": {
+                    "type": "string"
+                },
+                "pasienID": {
+                    "type": "integer"
+                },
+                "tanggal": {
+                    "type": "string"
+                },
+                "tekanan_darah": {
+                    "type": "string"
+                },
+                "tindakan": {
+                    "type": "string"
+                }
+            }
+        },
+        "controller.dokterInput": {
+            "type": "object",
+            "properties": {
+                "jadwal": {
+                    "type": "string"
+                },
+                "jenis_kelamin": {
+                    "type": "string"
+                },
+                "nama": {
+                    "type": "string"
+                },
+                "no_hp": {
+                    "type": "string"
+                },
+                "spesialis": {
+                    "type": "string"
+                },
+                "tanggal_lahir": {
+                    "type": "string"
+                }
+            }
+        },
+        "controller.kamarInput": {
+            "type": "object",
+            "properties": {
+                "harga": {
+                    "type": "string"
+                },
+                "lantai": {
+                    "type": "string"
+                },
+                "status": {
+                    "type": "boolean"
+                },
+                "type": {
+                    "type": "string"
+                }
+            }
+        },
+        "controller.obatInput": {
+            "type": "object",
+            "properties": {
+                "harga": {
+                    "type": "string"
+                },
+                "keterangan": {
+                    "type": "string"
+                },
+                "nama": {
+                    "type": "string"
+                },
+                "satuan": {
+                    "type": "string"
+                }
+            }
+        },
+        "controller.pasienInput": {
+            "type": "object",
+            "properties": {
+                "alamat": {
+                    "type": "string"
+                },
+                "jenis_kelamin": {
+                    "type": "string"
+                },
+                "nama": {
+                    "type": "string"
+                },
+                "no_hp": {
+                    "type": "string"
+                },
+                "tanggal_lahir": {
+                    "type": "string"
+                }
+            }
+        },
+        "controller.perawatInput": {
+            "type": "object",
+            "properties": {
+                "nama": {
+                    "type": "string"
+                }
+            }
+        },
+        "controller.rawatInapInput": {
+            "type": "object",
+            "properties": {
+                "dokterInapID": {
+                    "type": "integer"
+                },
+                "kamarID": {
+                    "type": "string"
+                },
+                "pasienID": {
+                    "type": "integer"
+                },
+                "perawatID": {
+                    "type": "integer"
+                },
+                "tanggal_keluar": {
+                    "type": "string"
+                },
+                "tanggal_masuk": {
+                    "type": "string"
+                }
+            }
+        },
+        "controller.resepInput": {
+            "type": "object",
+            "properties": {
+                "diagnosaID": {
+                    "type": "integer"
+                },
+                "dosis": {
+                    "type": "string"
+                },
+                "jumlah": {
+                    "type": "integer"
+                },
+                "obatID": {
+                    "type": "integer"
+                }
+            }
+        },
+        "controller.transaksiInput": {
+            "type": "object",
+            "properties": {
+                "biaya_dokter": {
+                    "type": "string"
+                },
+                "biaya_kamar": {
+                    "type": "string"
+                },
+                "biaya_obat": {
+                    "type": "string"
+                },
+                "diagnosaID": {
+                    "type": "integer"
+                },
+                "total": {
+                    "type": "string"
+                }
+            }
+        },
+        "models.Appointment": {
+            "type": "object",
+            "properties": {
+                "department": {
+                    "type": "string"
+                },
+                "id": {
+                    "type": "integer"
+                },
+                "mode": {
+                    "type": "string"
+                },
+                "pasienID": {
+                    "type": "integer"
+                }
+            }
+        },
+        "models.Diagnosa": {
+            "type": "object",
+            "properties": {
+                "berat_badan": {
+                    "type": "number"
+                },
+                "dokterID": {
+                    "type": "integer"
+                },
+                "hasil_diagnosa": {
+                    "type": "string"
+                },
+                "id": {
+                    "type": "integer"
+                },
+                "keluhan": {
+                    "type": "string"
+                },
+                "pasienID": {
+                    "type": "integer"
+                },
+                "tanggal": {
+                    "type": "string"
+                },
+                "tekanan_darah": {
+                    "type": "string"
+                },
+                "tindakan": {
+                    "type": "string"
+                }
+            }
+        },
+        "models.Dokter": {
+            "type": "object",
+            "properties": {
+                "id": {
+                    "type": "integer"
+                },
+                "jadwal": {
+                    "type": "string"
+                },
+                "jenis_kelamin": {
+                    "type": "string"
+                },
+                "nama": {
+                    "type": "string"
+                },
+                "no_hp": {
+                    "type": "string"
+                },
+                "spesialis": {
+                    "type": "string"
+                },
+                "tanggal_lahir": {
+                    "type": "string"
+                }
+            }
+        },
+        "models.Kamar": {
+            "type": "object",
+            "properties": {
+                "harga": {
+                    "type": "string"
+                },
+                "lantai": {
+                    "type": "string"
+                },
+                "no_kamar": {
+                    "type": "string"
+                },
+                "status": {
+                    "type": "boolean"
+                },
+                "type": {
+                    "type": "string"
+                }
+            }
+        },
+        "models.Obat": {
+            "type": "object",
+            "properties": {
+                "harga": {
+                    "type": "string"
+                },
+                "id": {
+                    "type": "integer"
+                },
+                "keterangan": {
+                    "type": "string"
+                },
+                "nama": {
+                    "type": "string"
+                },
+                "satuan": {
+                    "type": "string"
+                }
+            }
+        },
+        "models.Pasien": {
+            "type": "object",
+            "properties": {
+                "alamat": {
+                    "type": "string"
+                },
+                "created_at": {
+                    "type": "string"
+                },
+                "id": {
+                    "type": "integer"
+                },
+                "jenis_kelamin": {
+                    "type": "string"
+                },
+                "nama": {
+                    "type": "string"
+                },
+                "no_hp": {
+                    "type": "string"
+                },
+                "tanggal_lahir": {
+                    "type": "string"
+                },
+                "updated_at": {
+                    "type": "string"
+                }
+            }
+        },
+        "models.Perawat": {
+            "type": "object",
+            "properties": {
+                "id": {
+                    "type": "integer"
+                },
+                "nama": {
+                    "type": "string"
+                }
+            }
+        },
+        "models.RawatInap": {
+            "type": "object",
+            "properties": {
+                "dokterID": {
+                    "type": "integer"
+                },
+                "id": {
+                    "type": "integer"
+                },
+                "kamarID": {
+                    "type": "string"
+                },
+                "pasienID": {
+                    "type": "integer"
+                },
+                "perawatID": {
+                    "type": "integer"
+                },
+                "tanggal_keluar": {
+                    "type": "string"
+                },
+                "tanggal_masuk": {
+                    "type": "string"
+                }
+            }
+        },
+        "models.Resep": {
+            "type": "object",
+            "properties": {
+                "diagnosaID": {
+                    "type": "integer"
+                },
+                "dosis": {
+                    "type": "string"
+                },
+                "id": {
+                    "type": "integer"
+                },
+                "jumlah": {
+                    "type": "integer"
+                },
+                "obatID": {
+                    "type": "integer"
+                }
+            }
+        },
+        "models.Transaksi": {
+            "type": "object",
+            "properties": {
+                "biaya_dokter": {
+                    "type": "string"
+                },
+                "biaya_kamar": {
+                    "type": "string"
+                },
+                "biaya_obat": {
+                    "type": "string"
+                },
+                "diagnosaID": {
+                    "type": "integer"
+                },
+                "id": {
+                    "type": "integer"
+                },
+                "total": {
+                    "type": "string"
+                }
+            }
+        }
+    }
+}
