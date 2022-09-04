@@ -1,6 +1,6 @@
 module final-project
 
-// +heroku goVerion go1.19
+// +heroku goVerion go1.18
 go 1.19
 
 require gorm.io/gorm v1.23.8
